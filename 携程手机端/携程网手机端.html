@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            /*height: 300px;*/
+            min-width: 320px;
+            max-width: 540px;
+            /*background-color: pink;*/
+            margin: 0 auto;
+            font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+        }
+
+        header {
+            height: 108px;
+        }
+
+        header img {
+            height: 100%;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            padding: 4px;
+        }
+
+        .row {
+            height: 90px;
+            /*border: 1px solid red;*/
+            display: flex;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 5px;
+            /*border-right:1px solid red;*/
+        }
+
+        .row div {
+            height: 100%;
+            flex: 1;
+            background-color: #FF697A;
+            border-right: 1px solid white;
+            /*border-bottom: 5px solid white;*/
+        }
+
+        .row div:nth-child(3) {
+            border-right: 0;
+        }
+
+        div a {
+            display: block;
+            /*height: 100px;*/
+            width: 100%;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .row33 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row33 a {
+            flex: 1;
+            width: 100%;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        .row33 a:first-child {
+            border-bottom: 1px solid white;
+        }
+
+        .row em {
+            display: block;
+            width: 100%;
+            text-align: center;
+            height: 45px;
+            line-height: 45px;
+            font-style: normal;
+        }
+
+        .row i {
+            display: block;
+            width: 43px;
+            height: 43px;
+            background: #000;
+            margin: -4px auto;
+            background: url("images/ctrip.png") no-repeat 0 -127px;
+            -webkit-background-size: 104px;  /* 前缀 */
+            -moz-background-size: 104px;  /* 前缀 火狐 */
+            -o-background-size: 104px;  /* 前缀 ie */
+            background-size: 104px auto;
+        }
+        .row .icon-flight {
+            background-position: 0 -288px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="images/banner.jpg" alt="">
+</header>
+<nav>
+    <div class="row">
+        <div>
+            <a href="#">
+                <em>酒店</em>
+                <i></i>
+            </a>
+        </div>
+        <div class="row33"><a href="">海外酒店</a><a href="">特价酒店</a></div>
+        <div class="row33"><a href="">团购</a><a href="">民俗客栈</a></div>
+    </div>
+    <div class="row">
+        <div>
+            <a href="#">
+                <em>酒店</em>
+                <i class="icon-flight"></i>
+            </a>
+        </div>
+        <div class="row33"><a href="">海外酒店</a><a href="">特价酒店</a></div>
+        <div class="row33"><a href="">团购</a><a href="">民俗客栈</a></div>
+    </div>
+    <div class="row">
+        <div>
+            <a href="#">
+                <em>酒店</em>
+                <i></i>
+            </a>
+        </div>
+        <div class="row33"><a href="">海外酒店</a><a href="">特价酒店</a></div>
+        <div class="row33"><a href="">团购</a><a href="">民俗客栈</a></div>
+    </div>
+    <div class="row">
+        <div class="row33"><a href="">海外酒店</a><a href="">特价酒店</a></div>
+        <div class="row33"><a href="">海外酒店</a><a href="">特价酒店</a></div>
+        <div class="row33"><a href="">团购</a><a href="">民俗客栈</a></div>
+    </div>
+</nav>
+
+</body>
+</html>
