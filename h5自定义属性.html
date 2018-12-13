@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul:first-child {
+            list-style: none;
+        }
+
+        ul:first-child li {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background: green;
+            float: left;
+            cursor: pointer;
+        }
+
+        ul:first-child li.active {
+            background: red;
+        }
+
+        .box li{
+            width: 400px;
+            height: 400px;
+            background: pink;
+            display: none;
+        }
+        .box li.show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <!--在渲染的时候  大小的属性会转换成小写 -->
+    <li data-content-id="content01">菜单1</li>
+    <li data-content-id="content02" class="active">菜单2</li>
+    <li data-content-id="content03">菜单3</li>
+    <li data-content-id="content04">菜单4</li>
+</ul>
+<ul class="box">
+    <li id="content01">内容1</li>
+    <li id="content03">内容3</li>
+    <li id="content04">内容4</li>
+    <li id="content02" class="show">内容2</li>
+</ul>
+<script>
+    window.onload=function () {
+        document.querySelector('.nav').onclick=function (e) {
+            var currli=e.target;
+            if(currli.classList.contains('active')) return false;
+            var oldli=document.querySelector('.active');
+            oldli.classList.remove('active');
+            currli.classList.add('active');
+            var oldcon=document.querySelector('#'+oldli.dataset['contentId']);
+            oldcon.classList.remove('show');
+            var currcon=document.querySelector('#'+currli.dataset['contentId']);
+            currcon.classList.add('show');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
